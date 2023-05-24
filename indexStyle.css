@@ -1,0 +1,149 @@
+:root {
+  /* Set up  general sizing variables */
+
+  font-family: "Times New Roman", Times, serif;
+  --headingFont: "Courier New", Courier, monospace;
+  --headingSize: min(6vw, 26px);
+  font-size: min(4vw, 16px);
+
+  /* root font is now 10px, This reccomendation is taken from: 
+  https://www.sitepoint.com/understanding-and-using-rem-units-in-css/  */
+
+  --FirstColor: rgb(253, 88, 86);
+  --SecondColor: rgb(150, 161, 217);
+  --background: rgb(252, 252, 252);
+
+  --headShotSize: min(15vw, 150px);
+}
+
+* {
+  /* Set all boxes to defualt at content size only */
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Background color and sizing */
+
+#headingStripe {
+  background-color: var(--FirstColor);
+  padding-bottom: calc(0.5 * var(--headShotSize));
+}
+#headingBorderStripe {
+  background-color: var(--SecondColor);
+  height: calc(0.5 * var(--headShotSize) + 5px);
+}
+#bodyBackground {
+  background-color: var(--background);
+}
+#footingStripe {
+  background-color: var(--SecondColor);
+
+  padding: 10px;
+}
+
+/* Heading Settings */
+
+h1,
+h2,
+h3 {
+  font-family: var(--headingFont);
+}
+
+h1 {
+  font-size: var(--headingSize);
+}
+h2 {
+  font-size: calc(5 / 6 * var(--headingSize));
+}
+h3 {
+  font-size: calc(4 / 6 * var(--headingSize));
+}
+header {
+  text-align: center;
+  text-shadow: 0px 0px 4px #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* headshot element positioning */
+.headshot {
+  align-content: center;
+  width: var(--headShotSize);
+  border: 5px solid var(--FirstColor);
+  position: absolute;
+
+  top: calc(2 * var(--headingSize) + 5px);
+
+  left: calc(50vw - calc(0.5 * var(--headShotSize)));
+
+  border-image: round;
+  border-radius: 60%;
+  object-fit: contain;
+}
+
+/* Basic Font Stlyezation */
+
+#mainContent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 10px;
+}
+
+.flexContent {
+  flex: 0 0 auto;
+}
+
+/* Section Container settings */
+#navigationBox {
+  background-color: var(--background);
+  border-top: 4px solid var(--FirstColor);
+  border-bottom: 4px solid var(--FirstColor);
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  height: fit-content;
+  width: clamp(60vw, 60vw, 80vw);
+}
+
+.navigationItem {
+  background-color: inherit;
+  flex: 1;
+  padding-left: 20px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: left;
+}
+
+article {
+  background-color: var(--background);
+  width: clamp(60vw, 60vw, 80vw);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h3 {
+  padding-top: 12px;
+}
+p {
+  padding-top: 10px;
+}
+
+li {
+  padding-top: 3px;
+  margin-left: 12px;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}

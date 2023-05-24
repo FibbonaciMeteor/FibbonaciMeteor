@@ -1,2 +1,1 @@
-# FibbonaciMeteor
-This group is for hosting projects displayed on the channel.
+Repo for hosting the web demo's I make on stream.

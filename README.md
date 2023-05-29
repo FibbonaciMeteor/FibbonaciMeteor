@@ -1,1 +1,1 @@
-Repo for hosting the web demo's I make on stream.
+Repo for hosting the web demo's I'm making

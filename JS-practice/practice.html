@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script scr="app.js"></script>
+    <script src="hello.js"></script>
+
+    <title>Rate Stuff</title>
+  </head>
+  <body>
+    <h1>Rate Stuff</h1>
+    <h2>Work In Progress</h2>
+    <a href="/RateStuff/README.md">Repo README</a>
+
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="1"
+        max="10"
+        value="5"
+        class="slider"
+        id="myRange"
+      />
+      <output name="rangeDisplay" for="myRange">5</output>
+    </div>
+    <form oninput="rangeDisplay2.value=parseInt(myRange.value)">
+      <input type="range" min="1" max="10" value="5" name="myRange2" />
+      <output name="rangeDisplay2" for="myRange2">4</output>
+    </form>
+    <!-- All html example -->
+    <h4>All Html example</h4>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+      <input type="range" id="b" name="b" value="50" /> +
+      <input type="number" id="a" name="a" value="10" /> =
+      <output name="result" for="a b">5</output>
+    </form>
+    <h4>Hello World Button</h4>
+    <input type="button" id="hello" onclick="foobar()" />
+  </body>
+</html>

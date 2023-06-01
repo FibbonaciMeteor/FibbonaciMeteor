@@ -1,3 +1,137 @@
+:root {
+  /* Set up  general sizing variables */
+
+  font-family: "Times New Roman", Times, serif;
+  --headingFont: "Courier New", Courier, monospace;
+  --headingSize: min(6vw, 26px);
+  font-size: min(4vw, 16px);
+
+  /* root font is now 10px, This reccomendation is taken from: 
+  https://www.sitepoint.com/understanding-and-using-rem-units-in-css/  */
+
+  --FirstColor: hsl(1, 98%, 66%);
+  --SecondColor: hsl(230, 47%, 72%);
+  --ThirdColor: hsl(115, 72%, 69%);
+  --background: rgb(252, 252, 252);
+}
+
+* {
+  /* Set all boxes to defualt at content size only */
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Background color and sizing */
+
+#headingStripe {
+  background-color: var(--FirstColor);
+  padding-bottom: 10px;
+}
+#menuStripe {
+  background-color: var(--SecondColor);
+  padding-bottom: 5px;
+  padding-bottom: 5px;
+}
+#bodyBackground {
+  background-color: var(--background);
+}
+#footingStripe {
+  background-color: var(--SecondColor);
+
+  padding: 10px;
+}
+
+/* Heading Settings */
+
+h1,
+h2,
+h3 {
+  font-family: var(--headingFont);
+}
+
+h1 {
+  font-size: var(--headingSize);
+}
+h2 {
+  font-size: calc(5 / 6 * var(--headingSize));
+}
+h3 {
+  font-size: calc(4 / 6 * var(--headingSize));
+}
+header {
+  text-align: center;
+  text-shadow: 0px 0px 4px #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flexContent {
+  flex: 0 0 auto;
+}
+
+/* Section Container settings */
+#menuBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: fit-content;
+  gap: clamp(10px, 10vw, 20vw);
+}
+#menuBox:first-child {
+  margin-left: 10px;
+}
+#menuBox:last-child {
+  margin-right: 10px;
+}
+.menuOption {
+  background-color: inherit;
+  flex: 1;
+  padding-left: 20px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: left;
+}
+
+/* Section Container settings */
+#navigationBox {
+  background-color: var(--background);
+  border: 4px solid var(--FirstColor);
+  margin-top: 15px;
+  margin-left: 10vw;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  height: fit-content;
+  width: fit-content;
+}
+
+.navigationItem {
+  background-color: inherit;
+  flex: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: left;
+}
+#ratingPanelsContainer {
+  width: auto;
+  height: 300px;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  gap: 2px;
+}
+.ratingModule {
+  border: 4px solid var(--ThirdColor);
+  padding: 2px;
+}
 #Archetype {
   visibility: hidden;
 }

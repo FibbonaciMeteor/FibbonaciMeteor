@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="style.css" />
-    <script scr="app.js"></script>
+    <script src="hello.js"></script>
+    <script scr="ratingApp.js"></script>
 
     <title>Rate Stuff</title>
   </head>
@@ -20,19 +21,34 @@
 
     <section id="menuStripe">
       <div id="menuBox" class="flexContent">
-        <button class="menuOption">Design Rating Panel</button>
-        <button class="menuOption">Add Panel</button>
-        <button class="menuOption">Set Rating Type</button>
-        <button class="menuOption">Set Rating Range</button>
+        <button onclick="foobar()">Test</button>
+        <input type="button" id="hello" onclick="buttonTest()" />
+        <input
+          class="menuOption"
+          type="button"
+          value="Add Panel"
+          onclick="buttonTest()"
+        />
+        <input
+          class="menuOption"
+          type="button"
+          name="hello"
+          value="Ranking Type"
+          onclick="buttonTest()"
+        />
+        <input
+          class="menuOption"
+          type="button"
+          name="hello"
+          value="Ranking Range"
+          onclick="buttonTest()"
+        />
       </div>
     </section>
 
     <section id="ratingPanelsContainer">
-      <div id="Archetyp" class="ratingModule flexContent">
+      <div id="Archetype" class="ratingModule flexContent">
         <p>Hidden Text</p>
-      </div>
-      <div class="ratingModule flexContent">
-        <p>Second</p>
       </div>
     </section>
 

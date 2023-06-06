@@ -66,17 +66,14 @@ header {
   margin-right: auto;
 }
 
-.flexContent {
-  flex: 0 0 auto;
-}
-
 /* Section Container settings */
 #menuBox {
   display: flex;
   flex-direction: row;
   align-items: center;
   height: fit-content;
-  gap: clamp(10px, 10vw, 20vw);
+  padding-top: 5px;
+  gap: 5px;
 }
 #menuBox:first-child {
   margin-left: 10px;
@@ -87,11 +84,11 @@ header {
 .menuOption {
   background-color: inherit;
   flex: 1;
-  padding-left: 20px;
+  padding-left: 4px;
   padding-right: 4px;
   padding-top: 2px;
   padding-bottom: 2px;
-  text-align: left;
+  text-align: center;
 }
 
 /* Section Container settings */
@@ -126,9 +123,46 @@ header {
   display: flex;
   flex-direction: row;
   align-items: left;
-  gap: 2px;
 }
-.ratingModule {
+#ratingSetting {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  margin-left: 30vw;
+  margin-right: 30vw;
+}
+.settingElement {
+  flex: 1;
+}
+.numberBox {
+  width: 25px;
+}
+.settingRange {
+  width: 20vw;
+}
+.ratingPanelContainer {
+  display: flex;
+}
+
+.ratingPanel {
+  flex: 0 0 auto;
+  margin: 2px;
   border: 4px solid var(--ThirdColor);
   padding: 2px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ratingElement {
+  flex: 1;
+  border: 1px solid black;
+  padding: 0px;
+}
+label {
+  font-size: 10px;
+  padding: 0;
+}
+.imageBox {
+  border: 4px solid var(--ThirdColor);
 }

@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="style.css" />
-    <script src="hello.js"></script>
-    <script scr="ratingApp.js"></script>
+    <script src="rateApp.js"></script>
 
     <title>Rate Stuff</title>
   </head>
   <body>
+    <datalist id="tickmarks">
+      <option value="0"></option>
+      <option value="2"></option>
+      <option value="4"></option>
+      <option value="6"></option>
+      <option value="8"></option>
+      <option value="10"></option>
+    </datalist>
     <section id="headingStripe">
       <header>
         <h1>Rate Stuff</h1>
@@ -21,34 +28,99 @@
 
     <section id="menuStripe">
       <div id="menuBox" class="flexContent">
-        <button onclick="foobar()">Test</button>
-        <input type="button" id="hello" onclick="buttonTest()" />
         <input
           class="menuOption"
           type="button"
+          name="addPanelButton"
           value="Add Panel"
           onclick="buttonTest()"
         />
         <input
           class="menuOption"
           type="button"
-          name="hello"
-          value="Ranking Type"
+          name="calculateButton"
+          value="Calculate"
           onclick="buttonTest()"
         />
-        <input
-          class="menuOption"
-          type="button"
-          name="hello"
-          value="Ranking Range"
-          onclick="buttonTest()"
-        />
+      </div>
+      <div id="ratingSetting">
+        <div class="settingElement">
+          <label for="Min">Min</label>
+          <input
+            class="settingElement numberBox"
+            name="Min"
+            type="text"
+            placeholder="1"
+          />
+        </div>
+
+        <div class="settingElement">
+          <label for="SettingRange">Average</label>
+          <input
+            type="range"
+            min="1"
+            max="10"
+            value="5"
+            class="slider"
+            name="SettingRange"
+            class="settingElement settingRange"
+            list="tickmarks"
+          />
+        </div>
+        <div class="settingElement">
+          <label for="Max">Max</label>
+          <input class="numberBox" name="Max" type="text" placeholder="10" />
+        </div>
+        <div class="settingElement">
+          <label for="spread">Spread/SD</label>
+          <input class="numberBox" name="Max" type="text" placeholder="1" />
+        </div>
       </div>
     </section>
 
     <section id="ratingPanelsContainer">
-      <div id="Archetype" class="ratingModule flexContent">
-        <p>Hidden Text</p>
+      <div id="Archetype" class="ratingPanel">
+        <img src="" alt="pic" name="pic" class="imagBox ratingElement" />
+
+        <label for="range1">Production</label>
+        <input
+          type="range"
+          min="1"
+          max="5"
+          value="3"
+          class="slider ratingElement"
+          id="range1"
+          name="range1"
+          list="tickmarks"
+        />
+
+        <input
+          type="range"
+          min="1"
+          max="10"
+          value="5"
+          class="slider ratingElement"
+          id="range1"
+          name="range2"
+        />
+        <input
+          type="range"
+          min="1"
+          max="10"
+          value="5"
+          class="slider ratingElement"
+          id="range1"
+          name="range2"
+        />
+        <input
+          type="range"
+          min="1"
+          max="10"
+          value="5"
+          class="slider ratingElement"
+          id="range1"
+          name="range1"
+        />
       </div>
     </section>
 

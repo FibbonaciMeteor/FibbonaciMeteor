@@ -6,3 +6,6 @@ function foobar() {
   alert("Just works");
   console.log("Hello again.");
 }
+function buttonTest() {
+  console.log("WHY");
+}
